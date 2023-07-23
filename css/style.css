@@ -1,0 +1,1816 @@
+@font-face {
+    font-family: 'bell';
+    src: url('../font/bellgothicstd-black-webfont.woff');
+}
+
+@font-face {
+    font-family: 'sang';
+    src: url('../font/SangSangClover_Regular.woff');
+}
+
+@font-face {
+    font-family: 'noto';
+    src: url('../font/NotoSans-Regular.woff');
+}
+
+@keyframes map-circle {
+    0% {
+        clip-path: circle(20.0% at 11% 18%);
+    }
+
+    30% {
+        clip-path: circle(31.3% at 80% 24%);
+    }
+
+    50% {
+        clip-path: circle(37.2% at 24% 70%);
+    }
+
+    80% {
+        clip-path: circle(49.3% at 75% 55%);
+    }
+
+    100% {
+        clip-path: circle(67.2% at 50% 50%);
+    }
+
+}
+
+@keyframes soft {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    background-color: #f2f2f2;
+    scroll-behavior: smooth;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 16vh;
+}
+
+header .inner {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .inner .logo{
+    width: 300px;
+}
+
+header .inner h1 {
+    font-size: 0;
+}
+
+.submenu {
+    background-color: darkgoldenrod;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #f2f2f2;
+    z-index: 9999;
+    display: none;
+    animation: soft 1s ease-out;
+    color: #333333;
+}
+
+.submenu .close {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+}
+
+.submenu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+    font-family: 'bell';
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    background-image: url('../img/lelabo_mainbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main .title {
+    width: 90%;
+    margin: auto;
+    color: white;
+    font-family: 'bell';
+    font-size: 7rem;
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main .title h2:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main p {
+    color: white;
+    line-height: 4rem;
+    margin-left: 50%;
+    font-family: 'sang';
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    width: 50%;
+    display: block;
+    padding: 4% 0;
+}
+
+.first {
+    width: 80%;
+    margin: 20% auto;
+    text-align: center;
+}
+
+.first .text1 {
+    font-family: 'sang';
+    margin-bottom: 25%;
+    color: #333333;
+}
+
+.first .text2 {
+    font-family: 'sang';
+    margin-bottom: 25%;
+    color: #333333;
+    margin-left: 45%;
+}
+
+.first .text3 {
+    font-family: 'sang';
+    margin-bottom: 25%;
+    color: #333333;
+    margin-bottom: 0;
+    margin-right: 40%;
+}
+
+.first .text1 h2 {
+    margin-bottom: 2%;
+    font-size: 4rem;
+}
+
+.first .text2 h2 {
+    margin-bottom: 2%;
+    font-size: 4rem;
+}
+
+.first .text3 h2 {
+    margin-bottom: 2%;
+    font-size: 4rem;
+}
+
+.first .text1 p {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.first .text2 p {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.first .text3 p {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.first .text1 p>span {
+    font-weight: bold;
+}
+
+.first .text2 p>span {
+    font-weight: bold;
+}
+
+.first .text3 p>span {
+    font-weight: bold;
+}
+
+.second {
+    width: 85%;
+    margin: 20% auto;
+    height: 110vh;
+}
+
+.second h2 {
+    text-align: right;
+    font-family: 'bell';
+    font-size: 5rem;
+    margin-bottom: 20%;
+    color: #333333;
+}
+
+.second .lab_img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second .lab_img .box {
+    width: 23%;
+}
+
+.second .lab_img .box .textbox {
+    margin-top: 10%;
+    font-family: 'sang';
+    letter-spacing: 0.4rem;
+    color: #333333;
+}
+
+.second .lab_img .box .textbox h4 {
+    font-size: 1.7rem;
+}
+
+.second .lab_img .box .textbox p {
+    font-size: 1.6rem;
+    margin-top: 5%;
+    line-height: 2rem;
+}
+
+.third {
+    width: 85%;
+    margin: 20% auto;
+}
+
+.third h2 {
+    text-align: center;
+    font-family: 'bell';
+    font-size: 5rem;
+    margin-bottom: 10%;
+    color: #333333;
+}
+
+.third .ingredient_img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.third .ingredient_img .box {
+    position: relative;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.third .ingredient_img .box p {
+    position: absolute;
+    display: none;
+    font-family: 'sang';
+    color: white;
+    font-size: 1.9rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.third .ingredient_img .box:hover p {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    transition: 0.5s;
+}
+
+.third .arrow {
+    font-family: 'sang';
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10%;
+    font-size: 1.8rem;
+}
+
+.third .arrow img {
+    width: 120px;
+}
+
+.four {
+    width: 85%;
+    margin: 20% auto;
+}
+
+.four .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.four .logo h2 {
+    font-family: 'bell';
+    font-size: 5rem;
+    margin-bottom: 10%;
+    color: #333333;
+}
+
+.four .bbox {
+    display: flex;
+    font-family: 'sang';
+    color: white;
+    letter-spacing: 0.2rem;
+    justify-content: space-around;
+    margin-bottom: 10%;
+}
+
+.four .bbox>figure {
+    position: relative;
+}
+
+.four .bbox h4 {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    font-size: 1.7rem;
+}
+
+.four .bbox .text {
+    display: flex;
+    justify-content: center;
+    color: #333333;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    width: 40%;
+    margin-left: 3%;
+}
+
+.four .arrow {
+    font-family: 'sang';
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.8rem;
+}
+
+.four .arrow img {
+    width: 120px;
+}
+
+.five {
+    width: 95%;
+    margin: 20% auto;
+    text-align: center;
+}
+
+.five h2 {
+    font-family: 'bell';
+    font-size: 5rem;
+    margin-bottom: 10%;
+    text-align: center;
+    color: #333333;
+}
+
+.five>.map {
+    animation-name: map-circle;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.five>.text {
+    font-family: 'sang';
+    margin: 25% auto;
+    font-size: 1.9rem;
+    letter-spacing: 0.2rem;
+    line-height: 2.5rem;
+    color: #333333;
+    text-align: center;
+}
+
+.five .slidemap {
+    margin: 10% auto;
+    width: 80vw;
+}
+
+.five .slidemap .box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 35vw;
+}
+
+.five .slidemap .box .map>img {
+    margin: 0 auto;
+}
+
+.five .slidemap .box .perfume {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+}
+
+.five .slidemap .box h4 {
+    font-family: 'sang';
+    font-size: 1.9rem;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    color: #333333;
+}
+
+.five .slidemap .box .text {
+    font-family: 'sang';
+    margin-top: 10%;
+    letter-spacing: 0.2rem;
+    line-height: 2.3rem;
+    font-size: 1.9rem;
+    color: #333333;
+    text-align: center;
+    width: 500px;
+}
+
+.five .memory {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'sang';
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    color: #333333;
+}
+
+.five .arrow {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'sang';
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+.five .arrow img {
+    width: 120px;
+}
+
+.six {
+    width: 100%;
+    margin: 20% auto;
+}
+
+.six h2 {
+    font-family: 'bell';
+    font-size: 5rem;
+    margin-bottom: 10%;
+    text-align: center;
+    color: #333333;
+}
+
+.six .inner {
+    background-image: url('../img/lelabo_service_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3%;
+}
+
+.six .inner .left {
+    font-family: 'sang';
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin-right: 3%;
+}
+
+.six .inner .left h4 {
+    font-size: 2.5rem;
+    margin: 5% 0;
+}
+
+.six .inner .left .contact {
+    font-size: 1.7rem;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    margin-bottom: 5%;
+}
+
+.six .inner .left .list .form-row {
+    margin-bottom: 6%;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+    font-size: 1.6rem;
+}
+
+.six .inner .left .list .form-row select {
+    background-color: transparent;
+    border: none;
+    color: #333333;
+    font-family: 'sang';
+    outline: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 1.4rem;
+    margin-top: 3%;
+}
+
+.six .inner .left .list .form-row input {
+    background-color: transparent;
+    border: none;
+    color: #333333;
+    width: 100%;
+    height: 100%;
+    font-family: 'sang';
+    outline: none;
+    font-size: 1.4rem;
+    margin-top: 3%;
+    resize: none;
+}
+
+.six .inner .left .list .form-row textarea {
+    background-color: transparent;
+    color: #333333;
+    font-family: 'sang';
+    outline: none;
+    resize: none;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.six .inner .left .list .agree {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6%;
+}
+
+.six .inner .left .list .agree input {
+    width: 18px;
+}
+
+.six .inner .left .list .agree p {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 80%;
+}
+
+.six .inner .left .list .form-send input {
+    background-color: #8B7955;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 4vw;
+    height: 2vw;
+    font-family: 'sang';
+    margin-bottom: 6%;
+    font-size: 1.5rem;
+}
+
+.six .inner .right {
+    background-image: url(../img/lelabo_service_journal.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+}
+
+footer {
+    width: 100%;
+    height: 80vh;
+    border-top: 3px solid #9c9c9c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .inner {
+    width: 80vw;
+}
+
+footer .inner .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .inner .top .text ul {
+    font-family: 'sang';
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+}
+
+footer .inner .top .text ul li:nth-child(1) {
+    font-weight: bold;
+}
+
+footer .inner .bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+    font-family: 'sang';
+    letter-spacing: 0.2rem;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+}
+
+footer .inner .bottom figure {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {
+
+    /*큰테블릿*/
+    header .inner{
+        width: 90%;
+    }
+    header .inner .logo{
+        width: 90%;
+    }
+    header .inner .menu{
+        width: 40px;
+    }
+    .submenu .close{
+        left: 90%;
+        width: 60px;
+    }
+    .submenu ul{
+        font-size: 2.9rem;
+    }
+    main p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 0.1rem;
+        width: 60%;
+        margin-left: 40%;
+    }
+
+    .first .text1 h2 {
+        font-size: 3rem;
+    }
+
+    .first .text2 h2 {
+        font-size: 3rem;
+    }
+
+    .first .text3 h2 {
+        font-size: 3rem;
+    }
+
+    .first .text1 p {
+        font-size: 2rem;
+    }
+
+    .first .text2 p {
+        font-size: 2rem;
+    }
+
+    .first .text3 p {
+        font-size: 2rem;
+    }
+
+    .second {
+        height: 145vh;
+    }
+
+    .second h2 {
+        font-size: 4rem;
+    }
+
+    .second .lab_img {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    .second .lab_img .box {
+        width: 50%;
+        margin-bottom: 3%;
+    }
+
+    .second .lab_img .box .textbox {
+        width: 350px;
+    }
+
+    .second .lab_img .box .textbox h4 {
+        font-size: 1.5rem;
+    }
+
+    .second .lab_img .box .textbox p {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .third h2 {
+        font-size: 4rem;
+    }
+
+    .third .ingredient_img {
+        justify-content: space-evenly;
+    }
+
+    .third .ingredient_img .box p {
+        font-size: 1.4rem;
+    }
+
+    .third .arrow {
+        font-size: 1.4rem;
+    }
+
+    .four .logo h2 {
+        font-size: 4rem;
+    }
+
+    .four .bbox h4 {
+        font-size: 1.2rem;
+        left: 1%;
+    }
+
+    .four .bbox .text {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        width: 50%;
+        margin-left: 2%;
+    }
+
+    .four .arrow {
+        font-size: 1.4rem;
+    }
+
+    .five h2 {
+        font-size: 4rem;
+    }
+
+    .five>.text {
+        font-size: 1.5rem;
+    }
+
+    .five .slidemap .box h4 {
+        font-size: 1.5rem;
+    }
+
+    .five .slidemap .box .text {
+        width: 370px;
+        font-size: 1.4rem;
+    }
+
+    .five .arrow {
+        font-size: 1.4rem;
+    }
+
+    .five .memory {
+        font-size: 1.7rem;
+    }
+
+    .six h2 {
+        font-size: 4rem;
+    }
+
+    .six .inner .left h4 {
+        font-size: 2rem;
+    }
+
+    .six .inner .left .contact {
+        font-size: 1.5rem;
+    }
+
+    .six .inner .left .list .form-row {
+        font-size: 1.3rem;
+    }
+
+    .six .inner .left .list .form-row select {
+        font-size: 1.2rem;
+    }
+
+    .six .inner .left .list .form-row input {
+        font-size: 1.2rem;
+    }
+
+    .six .inner .left .list .form-row textarea {
+        font-size: 1.2rem;
+    }
+
+    .six .inner .left .list .agree input {
+        width: 15px;
+    }
+
+    .six .inner .left .list .agree p {
+        font-size: 1.2rem;
+    }
+
+    .six .inner .left .list .form-send input {
+        font-size: 1.2rem;
+        width: 5vw;
+        height: 3vw;
+    }
+
+    footer .inner .top .text ul {
+        font-size: 1.3rem;
+    }
+
+    footer .inner .bottom p {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+
+    /*큰태블릿~작은태블릿*/
+    header .inner{
+        width: 90%;
+    }
+    header .inner .logo{
+        width: 80%;
+    }
+    header .inner .menu{
+        width: 40px;
+    }
+    .submenu .close{
+        left: 85%;
+        width: 60px;
+    }
+    .submenu ul{
+        font-size: 2.8rem;
+    }
+    main .title {
+        font-size: 4rem;
+    }
+
+    main p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        margin-left: 50%;
+        width: 40%;
+    }
+
+    .first .text1 h2 {
+        font-size: 2.3rem;
+    }
+
+    .first .text2 h2 {
+        font-size: 2.3rem;
+    }
+
+    .first .text3 h2 {
+        font-size: 2.3rem;
+    }
+
+    .first .text1 p {
+        font-size: 1.5rem;
+    }
+
+    .first .text2 p {
+        font-size: 1.5rem;
+    }
+
+    .first .text3 p {
+        font-size: 1.5rem;
+    }
+
+    .second {
+        height: 135vh;
+    }
+
+    .second h2 {
+        font-size: 3rem;
+        margin-bottom: 20%;
+    }
+
+    .second .lab_img {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    .second .lab_img .box {
+        width: 45%;
+        margin-bottom: 3%;
+    }
+
+    .second .lab_img .box .textbox {
+        width: 330px;
+    }
+
+    .second .lab_img .box .textbox h4 {
+        font-size: 1.3rem;
+    }
+
+    .second .lab_img .box .textbox p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .third h2 {
+        font-size: 3rem;
+    }
+
+    .third .ingredient_img .box {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+
+    .third .ingredient_img .box p {
+        font-size: 1.3rem;
+    }
+
+    .third .arrow {
+        font-size: 1.3rem;
+    }
+
+    .third .arrow img {
+        width: 100px;
+    }
+
+    .four .logo h2 {
+        font-size: 3rem;
+    }
+
+    .four .bbox {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .four .bbox h4 {
+        font-size: 1.1rem;
+        left: 3%;
+    }
+
+    .four .bbox .text {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        width: 60%;
+        margin-top: 5%;
+    }
+
+    .four .arrow {
+        font-size: 1.3rem;
+    }
+
+    .four .arrow img {
+        width: 100px;
+    }
+
+    .five h2 {
+        font-size: 3rem;
+    }
+
+    .five>.text {
+        font-size: 1.3rem;
+    }
+
+    .five .slidemap .box h4 {
+        font-size: 1.3rem;
+    }
+
+    .five .slidemap .box .text {
+        width: 350px;
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    .five .memory {
+        font-size: 1.5rem;
+    }
+
+    .five .arrow {
+        font-size: 1.3rem;
+    }
+
+    .five .arrow img {
+        width: 100px;
+    }
+
+    .six h2 {
+        font-size: 3rem;
+    }
+
+    .six .inner .left {
+        width: 90%;
+    }
+
+    .six .inner .left h4 {
+        font-size: 1.7rem;
+    }
+
+    .six .inner .right {
+        display: none;
+    }
+
+    .six .inner .left .contact {
+        font-size: 1.3rem;
+    }
+
+    .six .inner .left .list .form-row select {
+        font-size: 1.1rem;
+    }
+
+    .six .inner .left .list .form-row input {
+        font-size: 1.1rem;
+    }
+
+    .six .inner .left .list .form-row textarea {
+        font-size: 1.1rem;
+    }
+
+    .six .inner .left .list .agree input {
+        width: 13px;
+    }
+
+    .six .inner .left .list .agree p {
+        font-size: 1.1rem;
+    }
+
+    .six .inner .left .list .form-send input {
+        font-size: 1.2rem;
+        width: 6vw;
+        height: 4vw;
+    }
+
+    footer {
+        height: 50vh;
+    }
+
+    footer .inner .top {
+        display: none;
+    }
+
+    footer .inner .bottom p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:766px) {
+
+    /*작은태블릿~큰모바일*/
+    header .inner{
+        width: 90%;
+    }
+    header .inner .logo{
+        width: 80%;
+    }
+    header .inner .menu{
+        width: 35px;
+    }
+    .submenu .close{
+        left: 85%;
+        width: 55px;
+    }
+    .submenu ul{
+        font-size: 2.7rem;
+    }
+    main .title {
+        font-size: 3rem;
+    }
+
+    main p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        margin-left: 40%;
+        width: 50%;
+    }
+
+    .first .text1 h2 {
+        font-size: 2rem;
+    }
+
+    .first .text2 h2 {
+        font-size: 2rem;
+    }
+
+    .first .text3 h2 {
+        font-size: 2rem;
+    }
+
+    .first .text1 p {
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+
+    .first .text2 p {
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+
+    .first .text3 p {
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+
+    .second {
+        height: 120vh;
+    }
+
+    .second h2 {
+        font-size: 2.4rem;
+        margin-bottom: 20%;
+    }
+
+    .second .lab_img {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    .second .lab_img .box {
+        width: 45%;
+        margin-bottom: 3%;
+    }
+
+    .second .lab_img .box .textbox {
+        width: 230px;
+    }
+
+    .second .lab_img .box .textbox h4 {
+        font-size: 1.2rem;
+    }
+
+    .second .lab_img .box .textbox p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .third h2 {
+        font-size: 2.4rem;
+    }
+
+    .third .ingredient_img {
+        justify-content: space-between;
+    }
+
+    .third .ingredient_img .box {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .third .ingredient_img .box p {
+        font-size: 1.2rem;
+    }
+
+    .third .arrow {
+        font-size: 1.2rem;
+    }
+
+    .third .arrow img {
+        width: 100px;
+    }
+
+    .four .logo h2 {
+        font-size: 2.4rem;
+    }
+
+    .four .bbox {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .four .bbox h4 {
+        font-size: 1rem;
+        left: 3%;
+    }
+
+    .four .bbox .text {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        width: 70%;
+        margin-top: 5%;
+    }
+
+    .four .arrow {
+        font-size: 1.2rem;
+    }
+
+    .four .arrow img {
+        width: 100px;
+    }
+
+    .five h2 {
+        font-size: 2.4rem;
+    }
+
+    .five>.text {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+    }
+
+    .five .slidemap .box h4 {
+        font-size: 1.2rem;
+    }
+
+    .five .slidemap .box .text {
+        width: 350px;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+
+    .five .memory {
+        font-size: 1.4rem;
+    }
+
+    .five .arrow {
+        font-size: 1.2rem;
+    }
+
+    .five .arrow img {
+        width: 100px;
+    }
+
+    .six h2 {
+        font-size: 2.4rem;
+    }
+
+    .six .inner .left {
+        width: 80%;
+    }
+
+    .six .inner .left h4 {
+        font-size: 1.7rem;
+    }
+
+    .six .inner .right {
+        display: none;
+    }
+
+    .six .inner .left .contact {
+        font-size: 1.2rem;
+    }
+
+    .six .inner .left .list .form-row {
+        font-size: 1.1rem;
+    }
+
+    .six .inner .left .list .form-row select {
+        font-size: 1rem;
+    }
+
+    .six .inner .left .list .form-row input {
+        font-size: 1rem;
+    }
+
+    .six .inner .left .list .form-row textarea {
+        font-size: 1rem;
+    }
+
+    .six .inner .left .list .agree input {
+        width: 15px;
+    }
+
+    .six .inner .left .list .agree p {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    .six .inner .left .list .form-send input {
+        font-size: 1.1rem;
+        width: 8vw;
+        height: 6vw;
+    }
+
+    footer {
+        height: 50vh;
+    }
+
+    footer .inner .top {
+        display: none;
+    }
+
+    footer .inner .bottom p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:539px) {
+
+    /*큰모바일*/
+    header .inner{
+        width: 90%;
+    }
+    header .inner .logo{
+        width: 70%;
+    }
+    header .inner .menu{
+        width: 30px;
+    }
+    .submenu .close{
+        left: 80%;
+        width: 50px;
+    }
+    .submenu ul{
+        font-size: 2.5rem;
+    }
+    main .title {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        margin-left: 30%;
+        width: 60%;
+    }
+
+    .first .text1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .first .text2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .first .text3 h2 {
+        font-size: 1.5rem;
+    }
+
+    .first .text1 p {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .first .text2 p {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .first .text3 p {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .second {
+        height: 120vh;
+    }
+
+    .second h2 {
+        font-size: 2rem;
+        margin-bottom: 20%;
+    }
+
+    .second .lab_img {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    .second .lab_img .box {
+        width: 43%;
+        margin-bottom: 3%;
+    }
+
+    .second .lab_img .box .textbox {
+        width: 170px;
+    }
+
+    .second .lab_img .box .textbox h4 {
+        font-size: 1.2rem;
+    }
+
+    .second .lab_img .box .textbox p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .third h2 {
+        font-size: 2rem;
+    }
+
+    .third .ingredient_img {
+        justify-content: space-between;
+    }
+
+    .third .ingredient_img .box {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .third .ingredient_img .box p {
+        font-size: 1.1rem;
+    }
+
+    .third .arrow {
+        font-size: 1.1rem;
+    }
+
+    .third .arrow img {
+        width: 100px;
+    }
+
+    .four .logo h2 {
+        font-size: 2rem;
+    }
+
+    .four .bbox {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .four .bbox h4 {
+        font-size: 0.9rem;
+        left: 3%;
+    }
+
+    .four .bbox .text {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .four .arrow {
+        font-size: 1.1rem;
+    }
+
+    .four .arrow img {
+        width: 100px;
+    }
+
+    .five h2 {
+        font-size: 2rem;
+    }
+
+    .five>.text {
+        font-size: 1.1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.8rem;
+    }
+
+    .five .slidemap .box h4 {
+        font-size: 1.1rem;
+    }
+
+    .five .slidemap .box .text {
+        width: 300px;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+
+    .five .memory {
+        font-size: 1.2rem;
+    }
+
+    .five .arrow {
+        font-size: 1.1rem;
+    }
+
+    .five .arrow img {
+        width: 100px;
+    }
+
+    .six h2 {
+        font-size: 2.2rem;
+    }
+
+    .six .inner .left {
+        width: 90%;
+    }
+
+    .six .inner .left h4 {
+        font-size: 1.6rem;
+    }
+
+    .six .inner .right {
+        display: none;
+    }
+
+    .six .inner .left .contact {
+        font-size: 1.1rem;
+    }
+
+    .six .inner .left .list .form-row {
+        font-size: 1rem;
+    }
+
+    .six .inner .left .list .form-row select {
+        font-size: 0.9rem;
+    }
+
+    .six .inner .left .list .form-row input {
+        font-size: 0.9rem;
+    }
+
+    .six .inner .left .list .form-row textarea {
+        font-size: 0.9rem;
+    }
+
+    .six .inner .left .list .agree input {
+        width: 15px;
+    }
+
+    .six .inner .left .list .agree p {
+        font-size: 0.9rem;
+        width: 80%;
+    }
+
+    .six .inner .left .list .form-send input {
+        font-size: 1.1rem;
+        width: 8vw;
+        height: 6vw;
+    }
+
+    footer {
+        height: 50vh;
+    }
+
+    footer .inner .top {
+        display: none;
+    }
+
+    footer .inner .bottom p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    /*작은모바일*/
+    header .inner{
+        width: 90%;
+    }
+    header .inner .logo{
+        width: 60%;
+    }
+    header .inner .menu{
+        width: 30px;
+    }
+    .submenu .close{
+        left: 80%;
+        width: 50px;
+    }
+    .submenu ul{
+        font-size: 2rem;
+    }
+
+    main .title {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        margin-left: 30%;
+        width: 60%;
+    }
+
+    .first .text1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .first .text2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .first .text3 h2 {
+        font-size: 1.5rem;
+    }
+
+    .first .text1 p {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .first .text2 p {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .first .text3 p {
+        font-size: 1rem;
+        letter-spacing: 0;
+    }
+
+    .second {
+        height: 80vh;
+    }
+
+    .second h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20%;
+    }
+
+    .second .lab_img {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    .second .lab_img .box {
+        width: 43%;
+        margin-bottom: 3%;
+    }
+
+    .second .lab_img .box .textbox {
+        width: 170px;
+    }
+
+    .second .lab_img .box .textbox h4 {
+        font-size: 1.1rem;
+    }
+
+    .second .lab_img .box .textbox p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .third h2 {
+        font-size: 1.8rem;
+    }
+
+    .third .ingredient_img {
+        justify-content: space-between;
+    }
+
+    .third .ingredient_img .box {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .third .ingredient_img .box p {
+        font-size: 1.1rem;
+    }
+
+    .third .arrow {
+        font-size: 1rem;
+    }
+
+    .third .arrow img {
+        width: 70px;
+    }
+
+    .four .logo h2 {
+        font-size: 1.8rem;
+    }
+
+    .four .bbox {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .four .bbox h4 {
+        font-size: 0.9rem;
+        left: 3%;
+    }
+
+    .four .bbox .text {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .four .arrow {
+        font-size: 1rem;
+    }
+
+    .four .arrow img {
+        width: 70px;
+    }
+
+    .five h2 {
+        font-size: 1.8rem;
+    }
+
+    .five>.text {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.8rem;
+    }
+
+    .five .slidemap .box h4 {
+        font-size: 1rem;
+    }
+
+    .five .slidemap .box .text {
+        width: 280px;
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    .five .memory {
+        font-size: 1.1rem;
+    }
+
+    .five .arrow {
+        font-size: 1rem;
+    }
+
+    .five .arrow img {
+        width: 70px;
+    }
+
+    .six h2 {
+        font-size: 1.8rem;
+    }
+
+    .six .inner .left {
+        width: 90%;
+    }
+
+    .six .inner .left h4 {
+        font-size: 1.4rem;
+    }
+
+    .six .inner .right {
+        display: none;
+    }
+
+    .six .inner .left .contact {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .six .inner .left .list .form-row {
+        font-size: 0.9rem;
+    }
+
+    .six .inner .left .list .form-row select {
+        font-size: 0.8rem;
+    }
+
+    .six .inner .left .list .form-row input {
+        font-size: 0.8rem;
+    }
+
+    .six .inner .left .list .form-row textarea {
+        font-size: 0.8rem;
+    }
+
+    .six .inner .left .list .agree {
+        display: none;
+    }
+
+    .six .inner .left .list .form-send input {
+        font-size: 1rem;
+        width: 9vw;
+        height: 6vw;
+    }
+
+    footer {
+        height: 40vh;
+    }
+
+    footer .inner {
+        width: 100vw;
+    }
+
+    footer .inner .top {
+        display: none;
+    }
+
+    footer .inner .bottom p {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+}
